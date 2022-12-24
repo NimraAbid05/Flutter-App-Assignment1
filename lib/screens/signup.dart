@@ -11,12 +11,28 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(60.0),
+      padding: EdgeInsets.all(85.0),
       child: ListView(
         children: [
+           Container(
+            child: Image.asset(
+              "images/girl.png",
+              height: 80,
+            ),
+          ),
           Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.all(20.0),
             child: Center(
-              child: Text("Let's you in"),
+              
+              child: Text(
+                "Let's you in",
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  
+                ),
+              ),
             ),
           ),
           Container(

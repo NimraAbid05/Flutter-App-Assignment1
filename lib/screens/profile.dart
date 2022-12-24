@@ -2,7 +2,6 @@ import 'package:first_app/screens/home.dart';
 
 import 'package:flutter/material.dart';
 
-
 class Profile extends StatefulWidget {
   const Profile({super.key});
 
@@ -19,8 +18,14 @@ class _ProfileState extends State<Profile> {
         children: [
           Container(
             alignment: Alignment.center,
-            padding: EdgeInsets.all(40.0),
-            child: Text("Fill your Profile"),
+            padding: EdgeInsets.all(30.0),
+            child: Text(
+              "Fill your Profile",
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
           Container(
             padding: const EdgeInsets.fromLTRB(2, 10, 2, 10),

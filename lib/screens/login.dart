@@ -1,4 +1,6 @@
-
+import 'package:first_app/screens/home.dart';
+import 'package:first_app/screens/profile.dart';
+import 'package:first_app/screens/signup.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -12,16 +14,28 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(60.0),
+      padding: EdgeInsets.fromLTRB(20, 60, 20, 20),
       child: ListView(
         children: [
           Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.all(40.0),
-            child: Text("Login to Your Account"),
+            child: Image.asset(
+              "images/logo.png",
+              height: 80,
+            ),
           ),
           Container(
-            padding: const EdgeInsets.fromLTRB(2, 10, 2, 10),
+            alignment: Alignment.center,
+            padding: EdgeInsets.all(22.0),
+            child: Text(
+              "Login to Your Account",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(5.0),
             child: TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -30,7 +44,7 @@ class _LoginState extends State<Login> {
             ),
           ),
           Container(
-            padding: const EdgeInsets.fromLTRB(2, 10, 2, 10),
+            padding: const EdgeInsets.all(5.0),
             child: TextField(
               obscureText: true,
               decoration: const InputDecoration(
@@ -45,10 +59,11 @@ class _LoginState extends State<Login> {
               label: Text("Remember me")),
           Container(
             height: 50,
-            padding: const EdgeInsets.fromLTRB(2, 10, 2, 10),
+            padding: const EdgeInsets.all(2.0),
             child: ElevatedButton(
               child: Text("Sign in"),
-              onPressed: () {},
+              onPressed: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => (Home()))),
             ),
           ),
           Container(
@@ -85,11 +100,9 @@ class _LoginState extends State<Login> {
                   children: [
                     Text("Don't have an account?"),
                     TextButton(
-                     
                       child: Text("Sign up"),
-                       onPressed: () {
-                        
-                      },
+                      onPressed: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => (SignUp()))),
                     ),
                   ],
                 ),
